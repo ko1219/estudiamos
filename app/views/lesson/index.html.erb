@@ -1,0 +1,85 @@
+<%= render partial: 'navbar' %>
+
+  <div class="course-layout-header">
+    <div class="course-name-ja">
+      基礎編
+    </div>
+    <div class="course-explain">
+      ここではスペイン語を話すための文法を全て習得できます。
+    </div>
+  </div>
+  <div class="course-name-es">
+    Curso Basico
+  </div>
+  <div class="main-lessons-container">
+    <div class="lessons-group col-md-4">
+      <div class="card">
+      <div class="card-img-top d-flex align-items-end" style="background-image: url('https://picsum.photos/300/100?image=1050');">
+       <div class="overlay"></div>
+       <h3 class="header-lesson-container">
+         <small class="lesson-number">Lecsión1</small>
+         スペイン語であいさつしよう！
+       </h3>
+       <div class="lesson-group-times">目安<br>2時間</div>
+      </div>
+        <ul class="list-group list-group-flush">
+        <% @lessons[0..11].each do |lesson| %>
+          <li class="list-group-item"><%= link_to lesson.title, lesson_path(lesson.id) %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="lessons-group col-md-4">
+      <div class="card">
+      <div class="card-img-top d-flex align-items-end" style="background-image: url('https://picsum.photos/300/100?image=10');">
+       <div class="overlay"></div>
+       <h3 class="header-lesson-container">
+         <small class="lesson-number">Lecsión1</small>
+         スペイン語であいさつしよう！
+       </h3>
+       <div class="lesson-group-times">目安<br>2時間</div>
+      </div>
+        <ul class="list-group list-group-flush">
+          <% @lessons[12..23].each do |lesson| %>
+            <li class="list-group-item"><%= link_to lesson.title, lesson_path(lesson.id) %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="lessons-group col-md-4">
+      <div class="card">
+      <div class="card-img-top d-flex align-items-end" style="background-image: url('https://picsum.photos/300/100?image=1012');">
+       <div class="overlay"></div>
+       <h3 class="header-lesson-container">
+         <small class="lesson-number">Lecsión1</small>
+         スペイン語であいさつしよう！
+       </h3>
+       <div class="lesson-group-times">目安<br>2時間</div>
+      </div>
+        <ul class="list-group list-group-flush">
+          <% @lessons[24..35].each do |lesson| %>
+            <li class="list-group-item"><%= link_to lesson.title, lesson_path(lesson.id) %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="lessons-group col-md-4">
+      <div class="card">
+      <div class="card-img-top d-flex align-items-end" style="background-image: url('https://picsum.photos/300/100?image=1002');">
+       <div class="overlay"></div>
+       <h3 class="header-lesson-container">
+         <small class="lesson-number">Lecsión1</small>
+         スペイン語であいさつしよう！
+       </h3>
+       <div class="lesson-group-times">
+         目安<br>2時間
+       </div>
+      </div>
+        <ul class="list-group list-group-flush">
+          <% @lessons[36..47].each do |lesson| %>
+            <li class="list-group-item"><%= link_to lesson.title, lesson_path(lesson.id) %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
